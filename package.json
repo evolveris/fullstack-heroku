@@ -1,0 +1,37 @@
+{
+  "name": "fullstack-heroku",
+  "version": "1.0.0",
+  "description": "Node.js + React + Heroku template",
+  "engines": {
+    "node": "10.x"
+  },
+  "scripts": {
+    "start": "node server",
+    "test": "jest --coverage",
+    "build": "cd react-ui/ && npm install && npm run build",
+    "heroku": "git push heroku main"
+  },
+  "cacheDirectories": [
+    "node_modules",
+    "react-ui/node_modules"
+  ],
+  "dependencies": {
+    "axios": "^0.21.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.16.4"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "create-react-app",
+    "react"
+  ],
+  "devDependencies": {
+    "jest": "23.6.0"
+  },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "react-ui"
+    ]
+  }
+}
